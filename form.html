@@ -36,6 +36,7 @@
         
     </style>
 </head>
+
 <header>
     <button onclick="window.location.href='index.html'">MAIN</button>
     <button onclick="window.location.href='nostyle.html'">nostyle</button>
@@ -44,55 +45,63 @@
     <button onclick="window.location.href='example.html'">example</button>
     <button onclick="window.location.href='form.html'">form</button>
 </header>
+
 <body>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <br>
-    </form>
-    
-    <form>
-        <h4>What are you: </h4>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">Naim's friend</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">Naim's bestfriend</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">Naim's bff</label>
-    </form>
-    
-    <form>
-        <label for="birthdate">Date of Birth:</label>
-        <input type="date" id="birthdate" name="birthdate">
-    </form>
-    
-    <form>
-        <h4>김나임은 에인젤: </h4>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> Yes</label><br>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2"> OFCS</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-        <label for="vehicle3"> no doubbt</label>
-      </form>
-      
       <form>
-        <label for="fruit">나임이는: </label>
-        <select id="fruit" name="fruit">
-            <option value="apple">착함</option>
-            <option value="banana">예쁨</option>
-            <option value="cherry">잘생김</option>
-            <option value="orange">배려심많음</option>
-        </select>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="major"> Major:</label>
+        <select id="major" required>
+                <option>ICT창업학부</option>
+                <option>국제어문학부</option>
+                <option>커뮤니켄이션학부</option>
+                <option>경영경제학부</option>
+                <option>법학부</option>
+                <option>상삼심리사회복지학부</option>
+                <option>생명과학부</option>
+                <option>전산전자공학부</option>
+                <option>기계제어공학부</option>
+                <option>공간시스켐공학부</option>
+                <option>콘텐츠융합디자인학부</option>
+                <option>창의융합교육원</option>
+                <option>AI융합교육원</option>
+        </select><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="todaydate">Today's Date:</label>
+        <input type="date" id="todaydate" name="todaydate"><br><br>
+
+        <label for="rating">Rate your day (1-10):</label>
+        <input type="number" id="rating" min="1" max="10" required><br><br>
+
+        <label for="radio"> How do you feel today </label>
+        <br>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">Fine</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">Happy</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">Tired</label><br><br>
+
+        <lable>what you want to write about today: </lable><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> Joournal</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> Diary</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> Quote</label><br><br>
+
+        <label for="comment">Comments:</label><br>
+        <textarea id="comment" rows="4" cols="50"></textarea><br><br>
+
+        <button type="button" onclick="saveEntry()">Save Entry</button>
     </form>
+
+
     
-    <form>
-        <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-    </form>
 </body>
 </html>
 

@@ -21,7 +21,50 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
         <br>
-        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+    <br><br>
+    <form>
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate">
+    </form>
+    <br><br>
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+      </form>
+      <br><br>
+      <form>
+        <label for="fruit">Select a Fruit:</label>
+        <select id="fruit" name="fruit">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="cherry">Cherry</option>
+            <option value="orange">Orange</option>
+        </select>
+    </form>
+    <br><br>
+    <form>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
     </form>
 </body>
 </html>
+
+<!--
+    form.html 내에 사용할 입력 항목 type
+● 필수 : textㅇ, radioㅇ, checkboxㅇ, select, date, textarea
+● 선택 : fieldset, legend, optgroup, color, datalist
+-->

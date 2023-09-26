@@ -12,25 +12,60 @@
             
         }
 
-        button {
-            background-color: #040D12;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 25px;
-            cursor: pointer;
+        form {
+            background-color: #183D3D;
+            color: white;
+
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #93B1A6;
         }
 
-        /* Style the forms and form elements */
-        form {
-            margin: 20px;
+        h1 {
+            text-align: center;
+            color: #040D12;
+        }
+
+        textarea {
+            width: 80%;
             padding: 10px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
 
-        label {
+        button {
+            background-color: #040D12;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5C8374;
+        }
+        
+
+        /* Style the forms and form elements */
+        form {
+            margin: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .question {
             font-weight: bold;
+            font-size:large;
+        }
+
+        .option-label {
+            padding: 5px;
+            margin-bottom: 15px;
+
         }
 
         
@@ -44,15 +79,19 @@
     <button onclick="window.location.href='style2.html'">style2</button>
     <button onclick="window.location.href='example.html'">example</button>
     <button onclick="window.location.href='form.html'">form</button>
+    <h1>Welcome to 김나임's Homepage</h1>
 </header>
 
 <body>
+    
       <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
-        
+        <label class="question" for="name">Name:</label>
+        <input class="question" type="text" id="name" required><br><br>
 
-        <label for="major">Major:</label>
+        <label class="question" for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label class="question" for="major">Major:</label>
         <select id="major" required>
             <option value="" disabled selected>Select a major</option>
             <optgroup>
@@ -71,32 +110,29 @@
         </select><br><br>
 
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required><br><br>
-
-        <label for="todaydate">Today's Date:</label>
+        <label class="question" for="todaydate">Today's Date:</label>
         <input type="date" id="todaydate" name="todaydate"><br><br>
 
-        <label for="rating">Rate your day (1-10):</label>
+        <label class="question" for="rating">Rate your day (1-10):</label>
         <input type="number" id="rating" min="1" max="10" required><br><br>
 
-        <label for="radio">How do you feel today?</label><br>
+        <label class="question" for="radio">How do you feel today?</label><br>
         <input type="radio" id="fine" name="feeling" value="Fine">
-        <label for="fine">Fine</label><br>
-        <input type="radio" id="happy" name="feeling" value="Happy">
-        <label for="happy">Happy</label><br>
-        <input type="radio" id="tired" name="feeling" value="Tired">
-        <label for="tired">Tired</label><br><br>
+            <label class="option-label" for="fine">Fine</label><br>
+            <input type="radio" id="happy" name="feeling" value="Happy">
+            <label class="option-label" for="happy">Happy</label><br>
+            <input type="radio" id="tired" name="feeling" value="Tired">
+            <label class="option-label" for="tired">Tired</label><br><br>
 
-        <lable>What goals did you clear today: </lable><br>
+        <label class="question" >What goals did you clear today: </lable><br>
         <input type="checkbox" id="workout" name="habit" value="Workout">
-        <label for="workout"> Workout</label><br>
-        <input type="checkbox" id="sleep" name="habit" value="Sleep">
-        <label for="sleep"> Sleep</label><br>
-        <input type="checkbox" id="read" name="habit" value="Read">
-        <label for="read"> Read</label><br><br>
+            <label class="option-label" for="workout"> Workout</label><br>
+            <input type="checkbox" id="sleep" name="habit" value="Sleep">
+            <label class="option-label" for="sleep"> Sleep</label><br>
+            <input type="checkbox" id="read" name="habit" value="Read">
+            <label class="option-label" for="read"> Read</label><br><br>
 
-        <label for="comment">Comments:</label><br>
+        <label class="question" for="comment">Comments:</label><br>
         <textarea id="comment" rows="4" cols="50"></textarea><br><br>
 
         <button type="button" onclick="saveEntry()">Save Entry</button>

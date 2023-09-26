@@ -4,6 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Apply styles to the header and buttons */
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style the forms and form elements */
+        form {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        
+    </style>
 </head>
 <header>
     <button onclick="window.location.href='index.html'">MAIN</button>
@@ -22,40 +53,42 @@
         <input type="email" id="email" name="email">
         <br>
     </form>
-    <br><br>
+    
     <form>
+        <h4>What are you: </h4>
         <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label><br>
+        <label for="html">Naim's friend</label><br>
         <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label><br>
+        <label for="css">Naim's bestfriend</label><br>
         <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">JavaScript</label>
+        <label for="javascript">Naim's bff</label>
     </form>
-    <br><br>
+    
     <form>
         <label for="birthdate">Date of Birth:</label>
         <input type="date" id="birthdate" name="birthdate">
     </form>
-    <br><br>
+    
     <form>
+        <h4>김나임은 에인젤: </h4>
         <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> I have a bike</label><br>
+        <label for="vehicle1"> Yes</label><br>
         <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2"> I have a car</label><br>
+        <label for="vehicle2"> OFCS</label><br>
         <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-        <label for="vehicle3"> I have a boat</label>
+        <label for="vehicle3"> no doubbt</label>
       </form>
-      <br><br>
+      
       <form>
-        <label for="fruit">Select a Fruit:</label>
+        <label for="fruit">나임이는: </label>
         <select id="fruit" name="fruit">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="cherry">Cherry</option>
-            <option value="orange">Orange</option>
+            <option value="apple">착함</option>
+            <option value="banana">예쁨</option>
+            <option value="cherry">잘생김</option>
+            <option value="orange">배려심많음</option>
         </select>
     </form>
-    <br><br>
+    
     <form>
         <label for="comments">Comments:</label>
         <textarea id="comments" name="comments" rows="4" cols="50"></textarea>

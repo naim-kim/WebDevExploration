@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
     <style>
         .profile {
-    text-align: center;
-}
+            text-align: center;
+        }
 
-.profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
 
-.profile h2 {
-    font-size: 24px;
-}
+        h1 {
+            font-family: Samlip, sans-serif;
+        }
 
-.profile p {
-    font-style: italic;
-    color: #777;
-}
+        .profile h2 {
+            font-size: 24px;
+        }
 
-.bio h2 {
-    font-size: 24px;
-    margin-top: 20px;
-}
+        .profile p {
+            font-style: italic;
+            color: #777;
+        }
 
-.bio p {
-    line-height: 1.5;
-}
+        .bio h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .bio p {
+            line-height: 1.5;
+        }
 
         /* Apply styles to the header and buttons */
         header {
             padding: 10px 0;
             text-align: center;
-            
+
         }
 
         button {
-            background-color: #040D12;
+            background-color: #9fdff8;
             color: #fff;
+            font-weight: bold;
             padding: 10px 20px;
             margin: 5px;
             border-radius: 25px;
+            ;border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
             cursor: pointer;
+        }
+        button:hover {
+            background-color: #5C8374;
         }
 
         /* Style the forms and form elements */
@@ -63,7 +78,11 @@
             font-weight: bold;
         }
 
-        
+        @font-face {
+  font-family: Samlip;
+  src: url('SDSamliphopangcheBasic.otf') format('opentype');
+}
+
     </style>
 </head>
 <header>
@@ -74,15 +93,17 @@
     <button onclick="window.location.href='example.html'">example</button>
     <button onclick="window.location.href='form.html'">form</button>
 </header>
+
 <body>
     <main>
+        <h1>Welcome to 김나임's Homepage</h1>
         <section class="profile">
             <img src="ProfilePic.jpg" alt="My ProfilePic">
             <h2>Naim Kim</h2>
             <p>HGU CSEE Student</p>
         </section>
 
-           
+
         <section class="bio">
             <h2>some info:</h2>
             <p>
@@ -90,8 +111,8 @@
             </p>
         </section>
     </main>
-    <h1>Welcome to 김나임's Homepage</h1>
     
+
     <p>My github page link: <a href="https://github.com/naim-kim"> Github page </a> </p>
 
     <ul>
@@ -121,4 +142,5 @@
         It preserves whitespace and line breaks.
     </pre>
 </body>
+
 </html>

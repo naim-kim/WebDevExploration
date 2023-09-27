@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" type="text/css" href="styles.css">
-
     <style>
         body {
             color: #5cccf8;
+            background-color: rgb(209, 248, 255);
+            font-family: SamlipBasic;
         }
 
         .profile {
@@ -26,8 +24,10 @@
         }
 
         h1 {
-            font-family: SamlipOutline, sans-serif;
             text-align: center;
+            font-family: SamlipOutline;
+            font-size: 40px;
+
         }
 
         .profile h2 {
@@ -40,7 +40,6 @@
         }
 
         .bio {
-            font-family: SamlipBasic;
             font-size: 20px;
             margin-top: 20px;
             padding: 20px;
@@ -57,46 +56,31 @@
             padding: 5px;
         }
 
-
-
         header {
             padding: 10px;
             text-align: center;
-
-        }
-
-        body {
-            background-color: rgb(209, 248, 255);
         }
 
         button {
+            /*button properties*/
             width: 100px;
             height: 50px;
             background-color: #9fdff8;
+            margin: 5px;
+            border-radius: 25px;
+            border: none;
+            /*text properties*/
             color: #fff;
             font-family: SamlipBasic;
             font-size: 18px;
             text-align: center;
-            margin: 5px;
-            border-radius: 25px;
-            border: none;
+
             cursor: pointer;
         }
 
         button:hover {
             background-color: #eaf9ff;
             color: #9fdff8;
-        }
-
-        form {
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        label {
-            font-weight: bold;
         }
 
         @font-face {
@@ -116,12 +100,12 @@
     </style>
 </head>
 <header>
-    <button onclick="window.location.href='index.html'">index</button>
-    <button onclick="window.location.href='nostyle.html'">nostyle</button>
-    <button onclick="window.location.href='style1.html'">style1</button>
-    <button onclick="window.location.href='style2.html'">style2</button>
-    <button onclick="window.location.href='example.html'">example</button>
-    <button onclick="window.location.href='form.html'">form</button>
+    <button onclick="window.location.href='index.html'">INDEX</button>
+    <button onclick="window.location.href='nostyle.html'">NOSTYLE</button>
+    <button onclick="window.location.href='style1.html'">STYLE1</button>
+    <button onclick="window.location.href='style2.html'">STYLE2</button>
+    <button onclick="window.location.href='example.html'">EXAMPLE</button>
+    <button onclick="window.location.href='form.html'">FORM</button>
 </header>
 
 <body>
@@ -131,19 +115,16 @@
             <img src="ProfilePic.jpg" alt="My ProfilePic">
             <h2>Naim Kim (김나임)</h2>
         </section>
-
         <section class="bio">
             <h2>Basic Info:</h2>
             <ul>
                 <li>HGU CSEE Student</li>
                 <li>Student Number: 22000056</li>
                 <li> 실프 1 분반</li>
-                <li>My GitHub Page: <a href="https://github.com/naim-kim">[Click Here !!]</a></li>
+                <li>My GitHub Page: <a href="https://github.com/naim-kim">[ Click Here !! ]</a></li>
             </ul>
-
         </section>
     </main>
-
 </body>
 
 </html>

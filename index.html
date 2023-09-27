@@ -10,63 +10,84 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 
     <style>
+        body {
+            color: #5cccf8;
+        }
+
         .profile {
             text-align: center;
         }
 
         .profile img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin-bottom: 10px;
         }
 
         h1 {
-            font-family: Samlip, sans-serif;
+            font-family: SamlipOutline, sans-serif;
+            text-align: center;
         }
 
         .profile h2 {
-            font-size: 24px;
+            font-size: 30px;
+            font-family: CookieRunBlack;
         }
 
         .profile p {
             font-style: italic;
-            color: #777;
+        }
+
+        .bio {
+            font-family: SamlipBasic;
+            font-size: 20px;
+            margin-top: 20px;
+            padding: 20px;
+
         }
 
         .bio h2 {
-            font-size: 24px;
+            font-family: SamlipOutline;
+            font-size: 30px;
             margin-top: 20px;
         }
 
-        .bio p {
-            line-height: 1.5;
+        .bio li {
+            padding: 5px;
         }
 
-        /* Apply styles to the header and buttons */
+
+
         header {
-            padding: 10px 0;
+            padding: 10px;
             text-align: center;
 
         }
 
-        button {
-            background-color: #9fdff8;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 25px;
-            ;border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #5C8374;
+        body {
+            background-color: rgb(209, 248, 255);
         }
 
-        /* Style the forms and form elements */
+        button {
+            width: 100px;
+            height: 50px;
+            background-color: #9fdff8;
+            color: #fff;
+            font-family: SamlipBasic;
+            font-size: 18px;
+            text-align: center;
+            margin: 5px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #eaf9ff;
+            color: #9fdff8;
+        }
+
         form {
             margin: 20px;
             padding: 10px;
@@ -79,10 +100,19 @@
         }
 
         @font-face {
-  font-family: Samlip;
-  src: url('SDSamliphopangcheBasic.otf') format('opentype');
-}
+            font-family: SamlipOutline;
+            src: url('SDSamliphopangcheOutline.otf') format('opentype');
+        }
 
+        @font-face {
+            font-family: SamlipBasic;
+            src: url('SDSamliphopangcheBasic.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: CookieRunBlack;
+            src: url('CookieRun Black.otf') format('opentype');
+        }
     </style>
 </head>
 <header>
@@ -99,48 +129,21 @@
         <h1>Welcome to 김나임's Homepage</h1>
         <section class="profile">
             <img src="ProfilePic.jpg" alt="My ProfilePic">
-            <h2>Naim Kim</h2>
-            <p>HGU CSEE Student</p>
+            <h2>Naim Kim (김나임)</h2>
         </section>
-
 
         <section class="bio">
-            <h2>some info:</h2>
-            <p>
-                -blahbahbhalhbalbh
-            </p>
+            <h2>Basic Info:</h2>
+            <ul>
+                <li>HGU CSEE Student</li>
+                <li>Student Number: 22000056</li>
+                <li> 실프 1 분반</li>
+                <li>My GitHub Page: <a href="https://github.com/naim-kim">[Click Here !!]</a></li>
+            </ul>
+
         </section>
     </main>
-    
 
-    <p>My github page link: <a href="https://github.com/naim-kim"> Github page </a> </p>
-
-    <ul>
-        <li>Unordered List Item 1</li>
-        <li>Unordered List Item 2</li>
-        <li>Unordered List Item 3</li>
-    </ul>
-
-    <ol>
-        <li>Ordered List Item 1</li>
-        <li>Ordered List Item 2</li>
-        <li>Ordered List Item 3</li>
-    </ol>
-
-    <img src="tlf.png" alt="Placeholder Image">
-
-    <div style="border: 1px solid #000; padding: 10px;">
-        <p>This is a <strong>div</strong> element with some inline <em>styles</em>.</p>
-    </div>
-
-    <blockquote>
-        <p>This is a blockquote. It is used to highlight a quotation from another source.</p>
-    </blockquote>
-
-    <pre>
-        This is a preformatted text.
-        It preserves whitespace and line breaks.
-    </pre>
 </body>
 
 </html>

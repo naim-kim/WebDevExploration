@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <style>/* Stylesheet 1: */
+    <style>
+        header {
+            text-align: center;
+        }
         body {
             font: 100% Lucida Sans, Verdana;
             margin: 20px;
             line-height: 26px;
+            line-height: 26px;
+    color: #285344;
+    background-color: #D0E7D2;
         }
-        
+
         .container {
-            xmin-width: 900px;
+            min-width: 900px;
         }
-        
+
         .wrapper {
             position: relative;
             overflow: auto;
         }
-        
-        #top, #sidebar, #bottom, .menuitem {
+
+        #top,
+        #sidebar,
+        #bottom,
+        .menuitem {
             border-radius: 4px;
             margin: 4px;
         }
-        
+
         #top {
-            background-color: #336352;
+            background-color: #285344;
             color: #ffffff;
             padding: 20px;
         }
-        
+
         #menubar {
             width: 200px;
-            float: left
+            float: left;
         }
-        
+
         #main {
             padding: 10px;
             margin: 0 210px;
         }
-        
+
         #sidebar {
             background-color: #e5e7e6;
-            color: #336352;
             padding: 10px;
-        
-            border: 1px solid #336352;
+            border: 2px solid #336352;
             width: 180px;
             bottom: 0;
             top: 0;
             right: 0;
             position: absolute;
         }
-        
+
         #bottom {
             border: 1px solid #d4d4d4;
             background-color: #f1f1f1;
@@ -59,107 +67,156 @@
             font-size: 70%;
             line-height: 14px;
         }
-        
-        #top h1, #top p, #menulist {
+
+        #top h1,
+        #top p,
+        #menulist {
             margin: 0;
-            padding: 0;
+            padding-top: 20px;
+            text-align: center;
         }
-        
+        #menulist {
+            margin-left: 0;
+            padding: 0;
+            text-align: left;
+        }
+
         .menuitem {
             background-color: #f1f1f1;
             border: 1px solid #d4d4d4;
             list-style-type: none;
-            padding: 2px;
+            padding: 10px;
             cursor: pointer;
         }
-        
+
         .menuitem:hover {
-            background-color: #ffffff;
+            background-color: #336352;
+            color: white;
         }
-        
+
         .menuitem:first-child {
-           background-color:#336352;
-           color: white;
-           font-weight:bold;
+            background-color: #336352;
+            color: white;
         }
-        
+        .menuitem:first-child:hover {
+            background-color: white;
+            color: #336352;
+        }
+
         a {
             color: #000000;
             text-decoration: underline;
         }
-        
+
         a:hover {
             text-decoration: none;
         }
         
-        
+        button {
+            /*button properties*/
+            width: 100px;
+            height: 50px;
+            background-color: #fff;
+            margin: 5px;
+            border-radius: 25px;
+            border: none;
+            /*text properties*/
+            color: #336352;
+            font-size: 18px;
+            text-align: center;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #336352;
+            color: #fff;
+        }
+
         @media (max-width: 800px) {
             #sidebar {
                 width: auto;
                 position: relative;
-            } 
+            }
+
             #main {
                 margin-right: 0;
-            }    
-               
+            }
+
         }
-        
+
         @media (max-width: 600px) {
             #menubar {
                 width: auto;
                 float: none;
             }
+
             #main {
                 margin: 0;
-            }    
+            }
         }
-        </style>
-        
-    
-</head>
-<body>
+    </style>
 
-<div class="container wrapper">
-  <div id="top">
-    <h1>Welcome to 김나임's Homepage</h1>
-    <button onclick="window.location.href='index.html'">MAIN</button>
-    <button onclick="window.location.href='nostyle.html'">nostyle</button>
-    <button onclick="window.location.href='style1.html'">style1</button>
-    <button onclick="window.location.href='style2.html'">style2</button>
-    <button onclick="window.location.href='example.html'">example</button>
-    <button onclick="window.location.href='form.html'">form</button>
-    <p>Use the menu to select different Stylesheets</p>
-  </div>
-  <div class="wrapper">
-   <div id="menubar">
-     <ul id="menulist">
-       <li class="menuitem" onclick="reStyle(0)">Stylesheet 1
-       <li class="menuitem" onclick="reStyle(1)">Stylesheet 2
-       <li class="menuitem" onclick="reStyle(2)">Stylesheet 3
-       <li class="menuitem" onclick="reStyle(3)">Stylesheet 4
-       <li class="menuitem" onclick="noStyles()">No Stylesheet
-     </ul>
+
+</head>
+
+
+<header>
+    <div class="container wrapper">
+        <div id="top">
+            <div id="buttons">
+            <button onclick="window.location.href='index.html'">INDEX</button>
+            <button onclick="window.location.href='nostyle.html'">NOSTYLE</button>
+            <button onclick="window.location.href='style1.html'">STYLE1</button>
+            <button onclick="window.location.href='style2.html'">STYLE2</button>
+            <button onclick="window.location.href='example.html'">EXAMPLE</button>
+            <button onclick="window.location.href='form.html'">FORM</button>
+            </div>
+            <h1>Welcome to 김나임's Homepage</h1>
+            <p>Use the menu to select different Stylesheets</p>
+        </div>
+    </header>
+        <body>
+        <div class="wrapper">
+            <div id="menubar">
+                <ul id="menulist">
+                    <li class="menuitem" onclick="reStyle(0)">Stylesheet 1
+                    <li class="menuitem" onclick="reStyle(1)">Stylesheet 2
+                    <li class="menuitem" onclick="reStyle(2)">Stylesheet 3
+                    <li class="menuitem" onclick="reStyle(3)">Stylesheet 4
+                    <li class="menuitem" onclick="noStyles()">No Stylesheet
+                </ul>
+            </div>
+            <div id="main">
+                <h1>Same Page Different Stylesheets</h1>
+                <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
+                    change the layout of this page by selecting different stylesheets in the menu, or by selecting one
+                    of the following links:<br>
+
+                </p>
+                <h2>No Styles</h2>
+                <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the
+                    page looks like with no stylesheet:<br><a href="#" onclick="noStyles();return false">No
+                        Stylesheet</a>.</p>
+            </div>
+            <div id="sidebar">
+                <h3>Side-Bar</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+        </div>
+
+
+        <div id="bottom">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+            vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+            accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
+            nulla facilisi.
+        </div>
     </div>
-    <div id="main">
-      <h1>Same Page Different Stylesheets</h1>
-      <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
-        
-      </p>
-       <h2>No Styles</h2>
-      <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:<br><a href="#" onclick="noStyles();return false">No Stylesheet</a>.</p>
-   </div>
-    <div id="sidebar">
-      <h3>Side-Bar</h3>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-    </div>
-  </div>  
-  
-  
-  <div id="bottom">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-  </div>
-</div>
 
 </body>
-</html>
 
+</html>

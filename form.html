@@ -64,8 +64,7 @@
         }
 
         div {
-            background-color: white;
-            color: #C70039;
+            color: FFF5E0;
             margin: 30px;
             padding: 20px;
         }
@@ -89,10 +88,10 @@
     
       <form id="myForm">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" value="Naim Kim" required><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" value="naimk4738@handong.ac.kr" required>
 
         <label for="major">Major:</label>
         <select id="major" name="major" required>
@@ -135,7 +134,7 @@
             <input type="checkbox" id="read" name="habit" value="Read">
             <label class="option-label" for="read"> Read</label><br><br>
 
-        <label class="question" for="comment">Comments:</label><br>
+            <label for="comment">Comments:</label>
         <textarea id="comment" rows="4" cols="50"></textarea><br><br>
 
         <button type="button" onclick="printData()"> Print Data: </button>
@@ -150,13 +149,15 @@
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var major = document.getElementById("major").value;
+            var comment = document.getElementById("comment").value;
             // Add more variables for other form elements
 
             // Construct the formatted string
-            var formattedData = name + " (" + major + "/" + email + ") /t date (day rate : #)\n" +
-                                " -feeling\n" +
-                                " -goals cleared\n" +
-                                " comment";
+            var formattedData = name + " (" + major + "/" + email + ") " +
+                                "\n       where date will go" +
+                                "\n Feeling (option)" +
+                                "\n Goals cleared: [First, Second]" +
+                                "\n Comment: " + comment;
 
             // Update the "here" div with the formatted data
             var hereDiv = document.getElementById("here");

@@ -7,24 +7,23 @@
     <style>
         header {
             padding: 10px 0;
-            text-align: center;
-            
+            text-align: center;  
         }
 
         form {
-            background-color: #183D3D;
-            color: white;
+            background-color: #C70039;
+            color: #FFF5E0;
 
         }
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            background-color: #93B1A6;
+            background-color: #FFF5E0;
         }
 
         h1 {
             text-align: center;
-            color: #040D12;
+            color: #C70039;
         }
 
         textarea {
@@ -36,15 +35,15 @@
         }
 
         button {
-            background-color: #040D12;
-            color: #fff;
+            background-color: #C70039;
+            color: #FFF5E0;
             border: none;
             padding: 10px 20px;
             border-radius: 25px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #5C8374;
+            background-color: #ff9bb7;
         }
         
         form {
@@ -62,7 +61,13 @@
         .option-label {
             padding: 5px;
             margin-bottom: 15px;
+        }
 
+        div {
+            background-color: white;
+            color: #C70039;
+            margin: 30px;
+            padding: 20px;
         }
 
         
@@ -82,15 +87,15 @@
 
 <body>
     
-      <form>
-        <label class="question" for="name">Name:</label>
-        <input class="question" type="text" id="name" required><br><br>
+      <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <label class="question" for="email">Email:</label>
-        <input type="email" id="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <label class="question" for="major">Major:</label>
-        <select id="major" required>
+        <label for="major">Major:</label>
+        <select id="major" name="major" required>
             <option value="" disabled selected>Select a major</option>
             <optgroup>
                 <option value="ICT창업학부">ICT창업학부</option>
@@ -133,11 +138,31 @@
         <label class="question" for="comment">Comments:</label><br>
         <textarea id="comment" rows="4" cols="50"></textarea><br><br>
 
-        <button type="button" onclick="saveEntry()">Save Entry</button>
+        <button type="button" onclick="printData()"> Print Data: </button>
     </form>
 
+    <div id="here">
+    </div>
+ 
+    <script>
+        function printData() {
+            // Get form elements by their IDs
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var major = document.getElementById("major").value;
+            // Add more variables for other form elements
 
-    
+            // Construct the formatted string
+            var formattedData = name + " (" + major + "/" + email + ") /t date (day rate : #)\n" +
+                                " -feeling\n" +
+                                " -goals cleared\n" +
+                                " comment";
+
+            // Update the "here" div with the formatted data
+            var hereDiv = document.getElementById("here");
+            hereDiv.textContent = formattedData;
+        }
+    </script>
 </body>
 </html>
 
